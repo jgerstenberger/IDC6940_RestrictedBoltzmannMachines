@@ -1,0 +1,54 @@
+---
+title: "Restricted Boltmann Machines"
+subtitle: "Literature Review"
+author: "Jason Gerstenberger & Jessica Wells (Advisor: Dr. Cohen)"
+date: today
+format:
+  html:
+    code-fold: true
+course: Capstone Projects in Data Science
+bibliography: references.bib # file contains bibtex for references
+#always_allow_html: true # this allows to get PDF with HTML features
+self-contained: true
+execute: 
+  warning: false
+  message: false
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Restricted Boltzmann machines for collaborative filtering (Salakhutdinov, 2007)
+
+## Goal of the paper
+
+The paper explains how Restricted Boltzmann Machines can be trained to predict user ratings in collaborative filtering. It details the training of such a model for predicting movie ratings using a large dataset of user ratings from Netflix.
+
+## Why is it important?
+
+Collaborative filtering is an important technique for recommendation systems and models at the time of the paper were not able to handle well the large datasets that were becoming available.
+
+## How is it solved? – methods
+
+Restricted Boltzmann Machines are used, which are a type of neural network with one visible layer and one hidden layer. All nodes in the visible layer are connected to all nodes in the hidden layer, but there are no connections between nodes in the same layer. The contrastive divergence algorithm is used to train the model and works by updating the weights of the connections between the visible and hidden layers using an estimate of the gradient. The model also uses conditional RBMs to incorporate information about which movies a user has rated.
+
+## Results/limitations, if any
+
+The RBM model is only slightly better than SVD on the Netflix dataset, but since its errors are different from SVD, it can be combined with SVD to improve predictions.
+
+
+# Training Products of Experts by Minimizing Contrastive Divergence (Hinton, 2002)
+
+## Goal of the paper
+
+The paper describes Products of Experts where distributions are combined through multiplication instead of the mixture of experts approach where distributions are combined through addition. The contrastive divergence algorithm is used to train the model.
+
+## Why is it important?
+
+PoEs are able to model complex, high-dimensional data distributions. Since an RBM is a PoE with one expert per hidden unit, the contrastive divergence algorithm can be used to train RBMs.
+
+## How is it solved? – methods
+
+To train with contrastive divergence, one starts by setting the visible units to a training example and then updating the hidden units to reflect the distribution of the visible units with randomized weights.
+
+## Results/limitations, if any

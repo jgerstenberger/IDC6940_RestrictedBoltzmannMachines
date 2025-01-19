@@ -18,19 +18,16 @@ editor:
     wrap: 72
 ---
 
-Slides: [slides.html](slides.html){target="_blank"} ( Go to `slides.qmd`
-to edit)
-
-::: callout-important
-**Remember:** Your goal is to make your audience understand and care
-about your findings. By crafting a compelling story, you can effectively
-communicate the value of your data science project.
-
-Carefully read this template since it has instructions and tips to
-writing!
-:::
+Literature Review [literature_review.html](literature_review.html){target="_blank"}  
+Slides: [slides.html](slides.html){target="_blank"}
 
 ## Introduction
+
+
+
+\
+\
+\
 
 The introduction should:
 
