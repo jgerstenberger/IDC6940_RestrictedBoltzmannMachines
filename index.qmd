@@ -18,7 +18,7 @@ editor:
     wrap: 72
 ---
 
-Literature Review [literature_review.html](literature_review.html){target="_blank"}  
+Literature Review [literature-review.html](literature-review.html){target="_blank"}  
 Slides: [slides.html](slides.html){target="_blank"}
 
 ## Introduction
