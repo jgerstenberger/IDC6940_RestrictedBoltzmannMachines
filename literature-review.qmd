@@ -49,6 +49,8 @@ PoEs are able to model complex, high-dimensional data distributions. Since an RB
 
 ## How is it solved? – methods
 
-To train with contrastive divergence, one starts by setting the visible units to a training example and then updating the hidden units to reflect the distribution of the visible units with randomized weights.
+To train with contrastive divergence, one starts by setting the visible units to a training example and calculating hidden unit values based on randomized weights. Then, the inputs are reconstructed from the hidden units using sampling and the hidden unit values are re-computed from the reconstruction. Weights are incremented between active inputs and active hidden units for the real data and are decremented for the reconstructed data.
 
 ## Results/limitations, if any
+
+The CD algorithm is significantly faster than other training algorithms for RBMs. PoEs can effective model complex data distributions. However, CD is an approximation and may not always converge to the best possible model.
