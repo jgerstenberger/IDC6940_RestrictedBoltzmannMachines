@@ -54,3 +54,41 @@ To train with contrastive divergence, one starts by setting the visible units to
 ## Results/limitations, if any
 
 The CD algorithm is significantly faster than other training algorithms for RBMs. PoEs can effective model complex data distributions. However, CD is an approximation and may not always converge to the best possible model.
+
+
+# A fast learning algorithm for deep belief nets (Hinton, 2006)
+
+## Goal of the paper
+
+The paper describes a learning algorithm for deep belief networks, which are essentially stacks of RBMs. The algorithm is based on the contrastive divergence algorithm used to train RBMs.
+
+## Why is it important?
+
+Deep belief networks are able to model complex data as the paper demonstrates in the case of MNIST digits.
+
+## How is it solved? – methods
+
+The algorithm trains deep belief networks by training each layer of the network as an RBM. The weights learned in the first layer are then used to initialize the weights of the second layer. This is repeated for each layer in the network. As such, this is an example of a "greedy" algorithm, with each layer receiving a different representation of the data.
+
+## Results/limitations, if any
+
+The DBN model trained in the paper achieves a lower error rate on the MNIST dataset than other models. However, the model does not learn to attend to the most informative parts of the image. The DBN shows how a generative model can learn low-level features with requiring labeled data.
+
+
+# Training Restricted Boltzmann Machines using Approximations to the Likelihood Gradient (Tieleman, 2008)
+
+## Goal of the paper
+
+The paper introduces the Persistent Contrastive Divergence algorithm for training RBMs. This algorithm preserves the state of the Markov chain (Gibbs sampling) between training examples, which makes training faster.
+
+## Why is it important?
+
+The PCD algorithm is faster than CD which allows for training of larger models and datasets.
+
+## How is it solved? – methods
+
+The PCD algorithm is similar to CD, but instead of starting from a random state for each training example, it uses the sample from the previous training example as the starting point for the next one. The paper trains RBM models on MNIST digits, email data, and images of horses used to test image segmentation. A mini batch of training examples is used to calculate the gradient for each update of the weights.
+
+## Results/limitations, if any
+
+For the models trained in the paper, PCD was able to train the models faster than CD and typically achieved better results. However, PCD is still an approximation and may not always converge to the best possible model. PCD also requires a low learning rate.
