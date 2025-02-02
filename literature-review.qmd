@@ -92,3 +92,42 @@ The PCD algorithm is similar to CD, but instead of starting from a random state 
 ## Results/limitations, if any
 
 For the models trained in the paper, PCD was able to train the models faster than CD and typically achieved better results. However, PCD is still an approximation and may not always converge to the best possible model. PCD also requires a low learning rate.
+
+
+# Information processing in dynamical systems: Foundations of harmony theory (Smolensky, 1986)
+
+## Goal of the paper
+
+Smolensky sought to encourage the exploration of mathematical analysis in the field of cognitive science, which he referenced as the subsymbolic paradigm, in contrast to the predominant focus on symbolic processing at the time. He bridged the two paradigms by demonstrating how graphical models could represent symbolic information.
+
+
+## Why is it important?
+
+The harmonium model described in the paper is essentially a restricted Boltzmann machine and the harmony measure parallels the concept of energy in the Boltzmann machine. This paper encouraged further investigation into physics-based models of cognition and the discovery of more efficient learning algorithms for neural networks. The paper also reinforced the idea that effective models would possess information in the proability distribution of the data.
+
+## How is it solved? - methods
+
+The harmonium model is a bipartite graph with visible and hidden units, called representational features and knowledge atoms. A Hebbian learning rule is used to update the weights between the visible and hidden units, increasing the weights when both units are active and decreasing them when one is active and the other is not.
+
+## Results/limitations, if any
+
+The harmonium model is applied to some relatively trivial examples in the paper. Only later with the creation of the contrastive divergence algorithm was it possible to train RBMs on more complex data.
+
+
+# A practical guide to training restricted Boltzmann machines (Hinton, 2010)
+
+## Goal of the paper
+
+The paper provides practical guidance on training Restricted Boltzmann Machines, including methods for maximizing the efficiency of the learning algorithm and choosing useful hyperparameter values.
+
+## Why is it important?
+
+RBM models are able to learn complex data distributions and can be used for a variety of tasks, including collaborative filtering and image recognition. However, without careful training procedures and hyperparameter selection, the models may not perform well.
+
+## How is it solved? - methods
+
+The paper provides guidance on how to effectively use contrastive divergence and update the weights of the model during training. It describes the considerations for choosing the size of mini-batches and the number of hidden units in the model. It provides details on choosing an initial learning rate and how to adjust it during training, and also how to use momentum to speed up training.
+
+## Results/limitations, if any
+
+As this paper focuses on training methods, it does not present any new results. It discusses problems such as hidden units being stuck with extremely small weights and overfitting and suggests methods for addressing these issues.
